@@ -6,7 +6,7 @@ import {ComponentFixture} from '@angular/core/testing';
 import {DebugElement} from '@angular/core';
 import {By} from '@angular/platform-browser';
 
-function findEl<T>(
+export function findEl<T>(
   fixture: ComponentFixture<T>,
   testId: string
 ): DebugElement {

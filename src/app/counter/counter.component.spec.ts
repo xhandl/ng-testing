@@ -6,7 +6,7 @@ import {DebugElement} from '@angular/core';
 import {click, expectText, setFieldValue} from '../spec-helpers';
 import {take, toArray} from 'rxjs';
 
-fdescribe('CounterComponent', () => {
+describe('CounterComponent', () => {
   let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
   let debugElement: DebugElement;
