@@ -1,12 +1,16 @@
 import {Component} from '@angular/core';
 import {CounterComponent} from '../counter/counter.component';
+import {ServiceCounterComponent} from '../service-counter/service-counter.component';
+import {CounterService} from '../../services/counter.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    CounterComponent
+    CounterComponent,
+    ServiceCounterComponent
   ],
+  providers: [CounterService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

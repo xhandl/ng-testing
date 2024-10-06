@@ -6,7 +6,7 @@ import {By} from '@angular/platform-browser';
 import {CounterComponent} from '../counter/counter.component';
 import {MockComponent} from 'ng-mocks';
 
-fdescribe('HomeComponent with ng-mocks', () => {
+describe('HomeComponent with ng-mocks', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 

@@ -19,7 +19,7 @@ class FakeCounterComponent implements Partial<CounterComponent> {
   public countChange = new EventEmitter<number>();
 }
 
-fdescribe('HomeComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
