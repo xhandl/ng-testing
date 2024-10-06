@@ -15,6 +15,13 @@ export function findEl<T>(
   );
 }
 
+export function findComponent<T>(
+  fixture: ComponentFixture<T>,
+  selector: string
+): DebugElement {
+  return fixture.debugElement.query(By.css(selector));
+}
+
 export function click<T>(
   fixture: ComponentFixture<T>,
   testId: string

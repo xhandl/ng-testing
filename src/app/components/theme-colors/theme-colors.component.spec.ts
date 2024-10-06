@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ThemeColorsComponent} from './theme-colors.component';
-import {click, findEl} from '../spec-helpers';
+import {click, findEl} from '../../spec-helpers';
 
 describe('ThemeColorsComponent', () => {
   let component: ThemeColorsComponent;

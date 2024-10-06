@@ -3,7 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {CounterComponent} from './counter.component';
 import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
-import {click, expectText, setFieldValue} from '../spec-helpers';
+import {click, expectText, setFieldValue} from '../../spec-helpers';
 import {take, toArray} from 'rxjs';
 
 describe('CounterComponent', () => {
