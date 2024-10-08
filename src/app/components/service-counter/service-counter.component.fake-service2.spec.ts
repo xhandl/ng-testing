@@ -5,7 +5,7 @@ import {click, expectText, setFieldValue} from '../../spec-helpers';
 import {CounterService} from '../../services/counter.service';
 import {BehaviorSubject, Observable} from 'rxjs';
 
-fdescribe('ServiceCounterComponent: integration test with fake service v2', () => {
+describe('ServiceCounterComponent: integration test with fake service v2', () => {
   const newCount = 123;
 
   let fixture: ComponentFixture<ServiceCounterComponent>;
