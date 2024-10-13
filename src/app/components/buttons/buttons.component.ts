@@ -1,5 +1,5 @@
 import {Component, signal} from '@angular/core';
-import {DisabledOnEmptyDirective} from '../../directive/disabled-on-empty.directive';
+import {DisabledOnEmptyDirective} from '../../directives/disabled-on-empty.directive';
 
 @Component({
   selector: 'app-buttons',

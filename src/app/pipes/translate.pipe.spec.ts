@@ -19,7 +19,7 @@ class HostComponent {
   public key = key1;
 }
 
-fdescribe('TranslatePipe', () => {
+describe('TranslatePipe', () => {
   let fixture: ComponentFixture<HostComponent>;
   let translateService: Pick<TranslateService, 'onTranslationChange' | 'get'>;
 
@@ -77,5 +77,4 @@ fdescribe('TranslatePipe', () => {
     fixture.detectChanges();
     expectContent(fixture, 'New translation for key1');
   });
-
 });
