@@ -1,0 +1,33 @@
+<!--Angular microsyntax-->
+<ul>
+  <li *appPaginate="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; perPage: 5; controls: controls">
+    {{ item }}
+  </li>
+</ul>
+
+<!-- Normal syntax with template -->
+<ul>
+  <ng-template appPaginate
+               let-item
+               [appPaginateOf]="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+               [appPaginatePerPage]="5"
+               [appPaginateControls]="controls">
+    <li>
+      {{ item }}
+    </li>
+  </ng-template>
+</ul>
+
+<ng-template #controls
+             let-previousPage="previousPage"
+             let-page="page"
+             let-pages="pages"
+             let-nextPage="nextPage">
+  <button (click)="previousPage()">
+    Previous page
+  </button>
+  {{ page }} / {{ pages }}
+  <button (click)="nextPage()">
+    Next page
+  </button>
+</ng-template>

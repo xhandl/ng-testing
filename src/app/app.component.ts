@@ -5,11 +5,12 @@ import {ThemeColorsComponent} from './components/theme-colors/theme-colors.compo
 import {HomeComponent} from './components/home/home.component';
 import {ButtonsComponent} from './components/buttons/buttons.component';
 import {DirectivesComponent} from './components/directives/directives.component';
+import {PaginateComponent} from './components/paginate/paginate.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CounterComponent, ThemeColorsComponent, HomeComponent, ButtonsComponent, DirectivesComponent],
+  imports: [RouterOutlet, CounterComponent, ThemeColorsComponent, HomeComponent, ButtonsComponent, DirectivesComponent, PaginateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
