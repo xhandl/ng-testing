@@ -1,0 +1,41 @@
+describe('App', () => {
+  beforeEach(() => {
+    cy.visit('/');
+  });
+
+  it('has the correct title', () => {
+    cy.title().should('equal', 'NgTesting');
+  });
+
+  it('the first counter 5 exists', () => {
+    cy.get('[data-testid="count"]')
+      .first()
+      .should('have.text', '5');
+  });
+
+  it('increments the count', () => {
+    cy.get('[data-testid="counter"]')
+      .within(() => {
+        cy.get('[data-testid="count"]').should('have.text', '5');
+        cy.get('[data-testid="increment-button"]').click();
+        cy.get('[data-testid="count"]').should('have.text', '6');
+      });
+  });
+
+  it('decrements the count', () => {
+    cy.get('[data-testid="counter"]')
+      .within(() => {
+        cy.get('[data-testid="decrement-button"]').click();
+        cy.get('[data-testid="count"]').should('have.text', '4');
+      });
+  });
+
+  it('resets the count', () => {
+    cy.get('[data-testid="counter"]')
+      .within(() => {
+        cy.get('[data-testid="reset-input"]').type('123');
+        cy.get('[data-testid="reset-button"]').click();
+        cy.get('[data-testid="count"]').should('have.text', '123');
+      });
+  });
+});
