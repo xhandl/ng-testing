@@ -1,4 +1,4 @@
 <p>Buttons</p>
-<button (click)="onClick()" [appDisabledOnEmpty]="items()">Click me</button>
-<button (click)="onAddItem()">Add item</button>
-<button (click)="onRemoveItem()">Remove item</button>
+<button (click)="onClick()" [appDisabledOnEmpty]="items()" data-testid="click-me-btn">Click me</button>
+<button (click)="onAddItem()" data-testid="add-item-btn">Add item</button>
+<button (click)="onRemoveItem()" data-testid="remove-item-btn">Remove item</button>
