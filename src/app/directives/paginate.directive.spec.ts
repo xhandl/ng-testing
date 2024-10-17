@@ -91,6 +91,17 @@ describe('PaginateDirective', () => {
     expectItems(els, [1, 2, 3]);
   });
 
+  it('empty items', () => {
+    const component = fixture.componentInstance;
+    component.items = [];
+    fixture.detectChanges();
+
+    const els = findEls(fixture, 'item');
+    expect(els.length).toBe(0);
+    expectText(fixture, 'page', '1');
+    expectText(fixture, 'pages', '1');
+  });
+
   function expectItems(
     elements: DebugElement[],
     expectedItems: number[]

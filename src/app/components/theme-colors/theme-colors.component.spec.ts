@@ -3,6 +3,9 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {ThemeColorsComponent} from './theme-colors.component';
 import {click, findEl} from '../../spec-helpers';
 
+const lightThemeBackgroundColor = 'rgb(220, 220, 220)'; // --theme-background-color: gainsboro;
+const darkThemeBackgroundColor = 'rgb(52, 58, 64)'; // --theme-background-color: #343a40;
+
 describe('ThemeColorsComponent', () => {
   let component: ThemeColorsComponent;
   let fixture: ComponentFixture<ThemeColorsComponent>;
@@ -36,7 +39,7 @@ describe('ThemeColorsComponent', () => {
     const contentEl = findEl(fixture, 'theme-colors-content');
     const computedStyle = getComputedStyle(contentEl.nativeElement);
 
-    expect(computedStyle.backgroundColor).toBe('rgb(220, 220, 220)'); // --theme-background-color: gainsboro;
+    expect(computedStyle.backgroundColor).toBe(lightThemeBackgroundColor);
   });
 
   it('toggle theme to change content color to dark', () => {
@@ -46,6 +49,19 @@ describe('ThemeColorsComponent', () => {
     const contentEl = findEl(fixture, 'theme-colors-content');
     const computedStyle = getComputedStyle(contentEl.nativeElement);
 
-    expect(computedStyle.backgroundColor).toBe('rgb(52, 58, 64)'); // --theme-background-color: #343a40;
+    expect(computedStyle.backgroundColor).toBe(darkThemeBackgroundColor);
+  });
+
+  it('toggle theme twice to get light theme again', () => {
+    click(fixture, 'theme-colors-toggle-btn');
+    fixture.detectChanges();
+
+    click(fixture, 'theme-colors-toggle-btn');
+    fixture.detectChanges();
+
+    const contentEl = findEl(fixture, 'theme-colors-content');
+    const computedStyle = getComputedStyle(contentEl.nativeElement);
+
+    expect(computedStyle.backgroundColor).toBe(lightThemeBackgroundColor);
   });
 });
